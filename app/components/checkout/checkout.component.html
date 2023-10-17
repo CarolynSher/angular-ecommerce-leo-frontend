@@ -100,17 +100,17 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>Street</label></div>
+                        <div class="col-md-2"> <label>Town</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input formControlName="street" type="text">
 
                                 <div *ngIf="shippingAddressStreet?.invalid && (shippingAddressStreet?.dirty || shippingAddressStreet?.touched)" class="alert alert-danger mt-1">
                                     <div *ngIf="shippingAddressStreet?.errors?.['required'] || shippingAddressStreet?.errors?.['notOnlyWhitespace']">
-                                        Street is required
+                                        Town is required
                                     </div>
                                     <div *ngIf="shippingAddressStreet?.errors?.['minlength']">
-                                        Street must be at least 2 characters long
+                                        Town must be at least 2 characters long
                                     </div>
                                 </div>
 
@@ -138,7 +138,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>State</label></div>
+                        <div class="col-md-2"> <label>County</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <select formControlName="state">
@@ -149,7 +149,7 @@
 
                                 <div *ngIf="shippingAddressState?.invalid && (shippingAddressState?.dirty || shippingAddressState?.touched)" class="alert alert-danger mt-1">
                                     <div *ngIf="shippingAddressState?.errors?.['required']">
-                                        State is required
+                                        County is required
                                     </div>
                                 </div>
                                 
@@ -158,17 +158,17 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>Zip Code</label></div>
+                        <div class="col-md-2"> <label>Postal Code</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input formControlName="zipCode" type="text">
 
                                 <div *ngIf="shippingAddressZipCode?.invalid && (shippingAddressZipCode?.dirty || shippingAddressZipCode?.touched)" class="alert alert-danger mt-1">
                                     <div *ngIf="shippingAddressZipCode?.errors?.['required'] || shippingAddressZipCode?.errors?.['notOnlyWhitespace']">
-                                        Zip code is required
+                                        Postal code is required
                                     </div>
                                     <div *ngIf="shippingAddressZipCode?.errors?.['minlength']">
-                                        Zip code must be at least 2 characters long
+                                        Postal code must be at least 2 characters long
                                     </div>
                                 </div>
 
@@ -212,17 +212,17 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>Street</label></div>
+                        <div class="col-md-2"> <label>Town</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input formControlName="street" type="text">
 
                                 <div *ngIf="billingAddressStreet?.invalid && (billingAddressStreet?.dirty || billingAddressStreet?.touched)" class="alert alert-danger mt-1">
                                     <div *ngIf="billingAddressStreet?.errors?.['required'] || billingAddressStreet?.errors?.['notOnlyWhitespace']">
-                                        Street is required
+                                        Town is required
                                     </div>
                                     <div *ngIf="billingAddressStreet?.errors?.['minlength']">
-                                        Street must be at least 2 characters long
+                                        Town must be at least 2 characters long
                                     </div>
                                 </div>
 
@@ -250,7 +250,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>State</label></div>
+                        <div class="col-md-2"> <label>County</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <select formControlName="state">
@@ -261,7 +261,7 @@
 
                                 <div *ngIf="billingAddressState?.invalid && (billingAddressState?.dirty || billingAddressState?.touched)" class="alert alert-danger mt-1">
                                     <div *ngIf="billingAddressState?.errors?.['required']">
-                                        State is required
+                                        County is required
                                     </div>
                                 </div>
 
@@ -270,18 +270,18 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>Zip Code</label></div>
+                        <div class="col-md-2"> <label>Postal Code</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input formControlName="zipCode" type="text">
 
                                 <div *ngIf="billingAddressZipCode?.invalid && (billingAddressZipCode?.dirty || billingAddressZipCode?.touched)" class="alert alert-danger mt-1">
                                     <div *ngIf="billingAddressZipCode?.errors?.['required'] || billingAddressZipCode?.errors?.['notOnlyWhitespace']">
-                                        Zip code is required
+                                        Postal code is required
                                     </div>
 
                                     <div *ngIf="billingAddressZipCode?.errors?.['minlength']">
-                                        Zip code must be at least 2 characters long
+                                        Postal code must be at least 2 characters long
                                     </div>
                                 </div>
 
@@ -302,6 +302,8 @@
                                 <select formControlName="cardType">
                                     <option>Visa</option>
                                     <option>Mastercard</option>
+                                    <option>M-pesa</option>
+                                    <option>Cash</option>
                                 </select>
 
                                 <div *ngIf="creditCardType?.invalid && (creditCardType?.dirty || creditCardType?.touched)" class="alert alert-danger mt-1">
@@ -315,7 +317,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>Name on Card</label></div>
+                        <div class="col-md-2"> <label>Name on Account</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input formControlName="nameOnCard" type="text">
@@ -334,7 +336,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2"> <label>Card Number</label></div>
+                        <div class="col-md-2"> <label>Account Number</label></div>
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input formControlName="cardNumber" type="text">
